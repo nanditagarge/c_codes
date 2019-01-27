@@ -1,25 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
-void main()
-{
-	int n,i,j,k,item;
-	int a[n];
-	printf("enter the value of n\n");
-	scanf("%d",&n);
-	printf("enter the elements of the array a\n");
-	for(i=1;i<=n;i++){
-		scanf("%d",a[i]);
+
+int * insert (int* a,int n, int k) {
+	for(int i=n-1;i<k;i--){
+		a[i+1]=a[i];
 	}
+	int item;
+	printf("enter the value to be inserted\n");
+	scanf("%d",&item);
+	a[k-1]=item;
+	return a;
+}
+
+
+
+int main()
+{
+	int n;
+	printf("enter the size of array");
+	scanf("%d",&n);
+	int *a;
+	printf("enter %d elements",n);
+    for(int i=0;i<n;i++){
+       scanf("%d",&a[i]);
+    }
+    int k;
 	printf("enter the value of k\n");
 	scanf("%d",&k);
-	for(j=n;j<k;j--){
-		a[j]=a[j+1];
-	}
-	printf("enter teh value to be inserted\n");
-	scanf("%d",&item);
-	a[k]=item;
-	n=n+1;
-	return a;
+	
+	int *b;
+	b = insert(a,n,k);
 
+	printf("the new array is :\n");
+	for(int i=0;i<n+1;i++){
+    	printf("%d",b[i]);
+    	printf("\n");
+    }
 
 }
+
+
