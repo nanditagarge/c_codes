@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int * insert (int* a,int n, int k) {
-	for(int i=n-1;i<k;i--){
+	for(int i=n-1;i>=k-1;i--){
 		a[i+1]=a[i];
 	}
 	int item;
