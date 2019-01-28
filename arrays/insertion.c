@@ -19,7 +19,7 @@ int main()
 	int n;
 	printf("enter the size of array");
 	scanf("%d",&n);
-	int *a;
+	int a[100];
 	printf("enter %d elements",n);
     for(int i=0;i<n;i++){
        scanf("%d",&a[i]);
