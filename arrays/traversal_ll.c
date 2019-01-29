@@ -17,8 +17,8 @@ void main()
 	for(i=0;i<n;i++){
 		printf("enter data into %d node\n",i);
 		scanf("%d",&data);
+		create_list(data);
 	}
-	create_list(data);
 	display();
 }
 create_list(int data)
