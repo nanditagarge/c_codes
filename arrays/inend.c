@@ -29,7 +29,7 @@ void main()
 
 
 }
-void create_list(data)
+void create_list(int data)
 {
 	struct node* q,* temp;
 	temp=malloc(sizeof(struct node));
@@ -47,7 +47,7 @@ void create_list(data)
 
 
 }
-void insertend(x)
+void insertend(int x)
 {
 	struct node* q,* new;
 	new=malloc(sizeof(struct node));
@@ -61,20 +61,24 @@ void insertend(x)
 		while(q -> link!= NULL)
 		{
 			q = q -> link;
-			q -> link =new;
+
 		}
+		
+		q -> link=new;	
+			
 	}
 
 	
 }
 void display()
 {
-	struct node* new;
-	new = start;
-	while(new!=NULL)
+	struct node* q;
+	q = start;
+	while(q!=NULL)
 	{
-		printf("%d",new-> info);
-		new = new -> link;
+		printf("%d",q-> info);
+
+		q = q -> link;
 	}
 	
 
