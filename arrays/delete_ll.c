@@ -13,7 +13,7 @@ void display();
 void main()
 {
 	int i,n,data,item;
-	start==NULL;
+	start=NULL;
 	printf("enter the number of nodes\n");
 	scanf("%d",&n);
 	for(i=0;i<n;i++){
