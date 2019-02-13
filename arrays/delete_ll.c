@@ -47,11 +47,12 @@ void delete(int item)
 	struct node* temp,* q;
 	temp=malloc(sizeof(struct node));
 	q=start;
-	if(q -> link -> info == item){
-		q -> link -> link == q -> link;
+	while(q -> link -> info == item){
+		q= q -> link;
+		q -> link == q -> link -> link;
 
 	}
-	q= q -> link;
+	
 	
 		
 	
