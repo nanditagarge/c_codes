@@ -32,6 +32,8 @@ void create_list(int data)
 {
 	struct node* temp,* q;
 	temp = malloc(sizeof(struct node));
+	temp -> info = data;
+	temp -> link = NULL;
 	if(start==NULL)
 		start=temp;
 	else
@@ -44,14 +46,20 @@ void create_list(int data)
 }
 void delete(int item)
 {
-	struct node* temp,* q;
-	temp=malloc(sizeof(struct node));
+	struct node* q;
+	
 	q=start;
-	while(q -> link -> info == item){
-		q= q -> link;
-		q -> link == q -> link -> link;
+	if(start -> info == item)
+	{
+		start = start -> link;
+		return;
 
 	}
+	while(q -> link -> info != item)
+		q= q -> link;
+	q -> link = q -> link -> link;
+
+	
 	
 	
 		
@@ -59,7 +67,7 @@ void delete(int item)
 }
 void display()
 {
-	struct node* q;
+	struct node *q;
 	q= start;
 	while(q!=NULL){
 		printf("%d",q -> info);
