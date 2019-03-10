@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+//INSERTION AT BEGINNING INTO LL
 struct node
 {
 	int info;

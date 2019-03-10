@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+//REVERSAL OF AN ARRAY
 int main()
 {
 	int a[100],i,n,x;

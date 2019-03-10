@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+//INSERTION INTO AN ARRAY
 
 int * insert (int* a,int n, int k) {
 	for(int i=n-1;i>=k-1;i--){

@@ -4,6 +4,7 @@
 int top = -1,stack[10];
 void push();
 void pop();
+void peep();
 void display();
 void main()
 {
@@ -52,6 +53,9 @@ void pop()
 		top=top-1;
 	}
 }
+
+
+
 void display()
 {
 	int i;
