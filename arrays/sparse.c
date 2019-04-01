@@ -1,4 +1,5 @@
 #include<stdio.h>
+void sparse();
 
 int main()
 {
@@ -55,34 +56,56 @@ int main()
     else
     	printf("not a sparse matrix\n");
 
-   
+    sparse();
 
-    if(k>l)
+   
+void sparse()
+{
+	int h,p,i,j;
+    int a[h][p];
+
+	if(k>l)
     {
-    	int h,p;
-    	int a[h][p];
+    	
     	a[0][0]=m;
     	a[0][1]=n;
     	a[0][2]=l;
     	for(h=1;h<l+2;h++)
     	{
-    		
-    	}
-    	for(i=0;i<m;i++)
-    	{
-    		for(j=0;j<n;j++)
+    		for(i=0;i<m;i++)
     		{
-    			if(matrix[i][j]!=0)
+    			for(j=0;j<n;j++)
     			{
-    				a[h][0]=i;
-    				a[h][1]=j;
-    				a[h][2]=matrix[i][j];
-
-
+    				if(matrix[i][j]!=0)
+    				{
+    					a[h][0]=i;
+    					a[h][1]=j;
+    					a[h][2]=matrix[i][j];
+    				}
     			}
-
     		}
     	}
     }
 
+  for(i=0;i<h;i++)
+  {
+  	for(j=0;j<p;j++)
+  	{
+  		printf("%d",a[h][p]);
+  	}
+  }
 }
+
+    
+    
+
+    			
+ 
+    		
+    	
+  
+    	
+    	
+    
+
+
